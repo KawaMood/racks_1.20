@@ -13,7 +13,7 @@ tag @s add pk.racks.rack.wall
 tag @s add pk.racks.rack.item
 tag @s add pk.item.1
 
-# 1.20 rotation fix
+# Fix rotation for 1.20
 data merge entity @s {transformation:{right_rotation:[0f,1f,0f,0f]}}
 
 # Set rotation from facing

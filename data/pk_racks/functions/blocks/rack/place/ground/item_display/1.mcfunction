@@ -16,7 +16,7 @@ tag @s add pk.item.1
 # Set data
 data merge entity @s {Rotation:[45f,0f]}
 
-# 1.20 rotation fix
+# Fix rotation for 1.20
 data merge entity @s {transformation:{right_rotation:[0f,1f,0f,0f]}}
 
 # Place

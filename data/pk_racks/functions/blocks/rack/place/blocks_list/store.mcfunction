@@ -37,7 +37,7 @@ data modify storage pk.common:data Temp.Rack.y set from storage pk.common:data T
 data modify storage pk.common:data Temp.Rack.z set from storage pk.common:data Temp.Block.z
 
 # Set dimension
-function pk_racks:blocks/rack/place/blocks_list/set_dimension_id
+data modify storage pk.common:data Temp.Waystone.Dimension set from entity @s Dimension
 
 # Store current block's info into the list
 data modify storage pk.racks:data Blocks.Racks append from storage pk.common:data Temp.Rack

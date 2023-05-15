@@ -3,8 +3,8 @@
 
 # Update depending on the current version 
 # - Changes from V.2.0.3
-execute if score $pk.racks.version pk.value matches ..3 run function pk_racks:base/update/revisions/4
+execute if score $pk.racks.version pk.value matches ..4 run function pk_racks:base/update/revisions/5/start
 
 # Set the data pack current version score
-scoreboard players set $pk.racks.version pk.value 4
-data modify storage pk.common:data Datapacks[{Name:"Racks"}].Version set value "2.0.3"
+scoreboard players set $pk.racks.version pk.value 5
+data modify storage pk.common:data Datapacks[{Name:"Racks"}].Version set value "2.1.0"

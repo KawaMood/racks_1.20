@@ -1,5 +1,5 @@
 #> pk_racks:blocks/rack/place/blocks_list/store
-# Store the Rack info from the controller
+# @context as the placer (placing player) at the placed block
 
 # Clear storage
 data remove storage pk.common:data Temp.Rack
@@ -28,8 +28,8 @@ data modify storage pk.common:data Temp.Rack.Items set value [{},{}]
 data modify storage pk.common:data Temp.Rack.Type set from storage pk.common:data Temp.Item.tag.SkullOwner.Properties.textures[0].Signature
 
 # Set owner data
-data modify storage pk.common:data Temp.Rack.Owner.UUID set from entity @a[tag=pk.temp.current.player,distance=..10,limit=1] UUID
-execute store result storage pk.common:data Temp.Rack.Owner.id int 1 run scoreboard players get @a[tag=pk.temp.current.player,distance=..10,limit=1] pk.player.id
+data modify storage pk.common:data Temp.Rack.Owner.UUID set from entity @s UUID
+execute store result storage pk.common:data Temp.Rack.Owner.id int 1 run scoreboard players get @s pk.player.id
 
 # Set coordinates
 data modify storage pk.common:data Temp.Rack.x set from storage pk.common:data Temp.Block.x
@@ -37,7 +37,7 @@ data modify storage pk.common:data Temp.Rack.y set from storage pk.common:data T
 data modify storage pk.common:data Temp.Rack.z set from storage pk.common:data Temp.Block.z
 
 # Set dimension
-data modify storage pk.common:data Temp.Waystone.Dimension set from entity @s Dimension
+data modify storage pk.common:data Temp.Rack.Dimension set from entity @s Dimension
 
 # Store current block's info into the list
 data modify storage pk.racks:data Blocks.Racks append from storage pk.common:data Temp.Rack

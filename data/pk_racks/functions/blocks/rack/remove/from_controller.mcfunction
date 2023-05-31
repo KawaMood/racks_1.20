@@ -10,24 +10,25 @@ tag @e[type=#pk_racks:custom_block/components,tag=pk.racks.rack.component,distan
 # Prepare data from controller
 data modify storage pk.common:data Temp.Rack set from entity @s data.Rack
 
-# Drop content
-execute if data storage pk.common:data Temp.Rack.Items[0].id run function pk_racks:blocks/rack/remove/drop_content/1
-execute if data storage pk.common:data Temp.Rack.Items[1].id run function pk_racks:blocks/rack/remove/drop_content/2
+# If in uninstall process: backup content
+execute if score $uninstall pk.temp matches 1 if data storage pk.common:data Temp.Rack.Items[{}].id run function pk_racks:blocks/rack/remove/rack_set_content_chest
+
+# If not in uninstall process: drop content
+execute unless score $uninstall pk.temp matches 1 if data storage pk.common:data Temp.Rack.Items[0].id run function pk_racks:blocks/rack/remove/drop_content/1
+execute unless score $uninstall pk.temp matches 1 if data storage pk.common:data Temp.Rack.Items[1].id run function pk_racks:blocks/rack/remove/drop_content/2
 
 # Drop item and run correct blocks break particles depending on the skin
-execute if data storage pk.common:data Temp.Rack{Type:"oak"} run function pk_racks:blocks/rack/remove/skins/oak
-execute if data storage pk.common:data Temp.Rack{Type:"birch"} run function pk_racks:blocks/rack/remove/skins/birch
-execute if data storage pk.common:data Temp.Rack{Type:"spruce"} run function pk_racks:blocks/rack/remove/skins/spruce
-execute if data storage pk.common:data Temp.Rack{Type:"dark_oak"} run function pk_racks:blocks/rack/remove/skins/dark_oak
+execute unless score $uninstall pk.temp matches 1 run function pk_racks:blocks/rack/remove/drop_item
 
 # Remove block
 execute if block ~ ~ ~ barrier run setblock ~ ~ ~ air
 
 # Remove from the block list
-function pk_racks:blocks/rack/remove/block_list/remove
+execute unless score $uninstall pk.temp matches 1 run function pk_racks:blocks/rack/remove/block_list/remove
 
 # Kill the matching components
 kill @e[type=#pk_racks:custom_block/components,tag=pk.temp.current.component,distance=..2]
+kill @s
 
 # Animations
 playsound block.wood.break block @a[distance=..30] ~ ~ ~

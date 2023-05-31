@@ -1,4 +1,4 @@
-#> pk_racks:blocks/rack/environment/wall/controller_tick
+#> pk_racks:blocks/rack/environment/wall/check
 
 # Remove block if the support block has been broken or if a block has been set on it (falling block / block pushed by piston)
 execute store result score $facing pk.temp run data get entity @s data.Rack.Facing

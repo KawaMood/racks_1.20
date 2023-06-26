@@ -7,4 +7,4 @@ execute if score $pk.racks.version pk.value matches ..4 run function pk_racks:ba
 
 # Set the data pack current version score
 scoreboard players set $pk.racks.version pk.value 6
-data modify storage pk.common:data Datapacks[{Name:"Racks"}].Version set value "2.1.1"
+data modify storage pk.common:data Datapacks[{Name:"Racks"}].Version set value "2.2.0"

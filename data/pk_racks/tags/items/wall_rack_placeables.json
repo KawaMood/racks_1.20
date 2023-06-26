@@ -6,10 +6,13 @@
         "#pk_racks:pickaxes",
         "#pk_racks:shovels",
         "#pk_racks:swords",
-        "minecraft:trident",
         "minecraft:crossbow",
         "minecraft:bow",
+        "minecraft:brush",
+        "minecraft:fishing_rod",
+        "minecraft:spyglass",
         "minecraft:shield",
-        "minecraft:shears"
+        "minecraft:shears",
+        "minecraft:trident"
     ]
 }

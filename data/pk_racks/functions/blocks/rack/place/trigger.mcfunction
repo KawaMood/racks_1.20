@@ -18,6 +18,13 @@ execute if data storage pk.common:data Temp.Rack{Type:"oak"} run scoreboard play
 execute if data storage pk.common:data Temp.Rack{Type:"birch"} run scoreboard players set $type pk.temp 1
 execute if data storage pk.common:data Temp.Rack{Type:"spruce"} run scoreboard players set $type pk.temp 2
 execute if data storage pk.common:data Temp.Rack{Type:"dark_oak"} run scoreboard players set $type pk.temp 3
+execute if data storage pk.common:data Temp.Rack{Type:"jungle"} run scoreboard players set $type pk.temp 4
+execute if data storage pk.common:data Temp.Rack{Type:"acacia"} run scoreboard players set $type pk.temp 5
+execute if data storage pk.common:data Temp.Rack{Type:"crimson"} run scoreboard players set $type pk.temp 6
+execute if data storage pk.common:data Temp.Rack{Type:"warped"} run scoreboard players set $type pk.temp 7
+execute if data storage pk.common:data Temp.Rack{Type:"mangrove"} run scoreboard players set $type pk.temp 8
+execute if data storage pk.common:data Temp.Rack{Type:"cherry"} run scoreboard players set $type pk.temp 9
+execute if data storage pk.common:data Temp.Rack{Type:"bamboo"} run scoreboard players set $type pk.temp 10
 
 # Set controller
 execute positioned ~0.5 ~0.5 ~0.5 summon marker run function pk_racks:blocks/rack/place/controller_initialize

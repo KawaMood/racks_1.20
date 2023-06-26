@@ -19,3 +19,9 @@ execute if entity @s[predicate=pk_racks:hold/bow] run data modify storage pk.com
 execute if entity @s[predicate=pk_racks:hold/shield] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[-0.707f,0.707f,0f,0f],translation:[-0.5f,-0.5f,-0.225f]}}
 # - Shears
 execute if entity @s[predicate=pk_racks:hold/shears] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{scale:[0.65f,0.65f,0.65f],left_rotation:[0f,0f,0.924f,-0.383f],translation:[-0.3f,-0.45f,0.4f]}}
+# - Fishing Rod
+execute if entity @s[predicate=pk_racks:hold/fishing_rod] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[0f,0f,-0.383f,0.924f],translation:[0f,0.05f,0.4f]}}
+# - Brush
+execute if entity @s[predicate=pk_racks:hold/brush] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{scale:[0.65f,0.65f,0.65f],left_rotation:[0f,0f,0.924f,-0.383f],translation:[-0.3f,-0.45f,0.4f]}}
+# - Spyglass
+execute if entity @s[predicate=pk_racks:hold/spyglass] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[0.707f,0f,0f,-0.707f],translation:[0f,0.01f,0.35f],scale:[1.2f,1.2f,1.2f]}}

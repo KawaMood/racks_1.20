@@ -18,6 +18,8 @@ execute if entity @s[predicate=pk_racks:hold/axe] run data modify storage pk.com
 execute if entity @s[predicate=pk_racks:hold/shovel] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[0f,0f,0.383f,0.924f],translation:[0f,0.15f,0f]}}
 # - Hoes
 execute if entity @s[predicate=pk_racks:hold/hoe] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[0f,0f,0.383f,0.924f],translation:[0f,0.08f,0f]}}
+# - Fishing Rod
+execute if entity @s[predicate=pk_racks:hold/fishing_rod] run data modify storage pk.common:data Temp.ItemDisplay merge value {transformation:{left_rotation:[0f,0f,0.383f,0.924f],translation:[0f,0.08f,0f]}}
 
 # Remove the temporary armor_stand
 kill @s
